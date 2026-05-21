@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -21,10 +24,17 @@ export default function Navbar() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  const navLinks = [
+    { name: "Fleet", href: "/" },
+    { name: "Technology", href: "/technology" },
+    { name: "Enterprise", href: "/enterprise" },
+    { name: "Support", href: "/support" },
+  ];
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/20 dark:bg-surface/80 dark:border-outline-variant/20">
       <div className="flex justify-between items-center px-mobile-margin md:px-container-padding h-16 md:h-20 max-w-[1440px] mx-auto">
-        <div className="flex items-center group cursor-pointer">
+        <Link href="/" className="flex items-center group cursor-pointer">
           <div className="relative flex flex-col">
             <span className="font-display-lg text-xl md:text-2xl font-black tracking-[0.3em] text-on-surface uppercase transition-all duration-300 group-hover:tracking-[0.35em]">
               Drone<span className="text-primary dark:text-primary-container">Lab</span>
@@ -32,34 +42,26 @@ export default function Navbar() {
             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary dark:bg-primary-container transition-all duration-500 group-hover:w-full"></span>
             <span className="absolute -bottom-1 right-0 w-0 h-[2px] bg-primary/30 dark:bg-primary-container/30 transition-all duration-700 delay-100 group-hover:w-1/2"></span>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-8">
-          <a
-            className="font-body-md text-body-md text-primary font-semibold border-b-2 border-primary dark:text-primary-container dark:border-primary-container pb-1"
-            href="#"
-          >
-            Fleet
-          </a>
-          <a
-            className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-            href="#"
-          >
-            Technology
-          </a>
-          <a
-            className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-            href="#"
-          >
-            Enterprise
-          </a>
-          <a
-            className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-            href="#"
-          >
-            Support
-          </a>
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`font-body-md text-body-md transition-colors pb-1 border-b-2 ${
+                  isActive 
+                    ? "text-primary dark:text-primary-container border-primary dark:border-primary-container font-semibold" 
+                    : "text-on-surface-variant hover:text-on-surface border-transparent"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="flex items-center gap-2 md:gap-4">
@@ -103,10 +105,20 @@ export default function Navbar() {
         isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
       }`}>
         <div className="flex flex-col p-mobile-margin gap-4">
-          <a className="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="/">Fleet</a>
-          <a className="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="/technology">Technology</a>
-          <a className="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="/enterprise">Enterprise</a>
-          <a className="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="/support">Support</a>
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsMenuOpen(false)}
+              className={`font-body-md text-body-md transition-colors ${
+                pathname === link.href 
+                  ? "text-primary font-semibold" 
+                  : "text-on-surface-variant hover:text-primary"
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
           <button className="sm:hidden w-full bg-on-background text-inverse-on-surface px-6 py-3 rounded-full font-body-md text-body-md font-semibold">
             Get Started
           </button>
