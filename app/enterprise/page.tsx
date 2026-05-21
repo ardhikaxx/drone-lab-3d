@@ -33,21 +33,21 @@ export default function Enterprise() {
               subtitle: "Smart Farming & Yield Optimization",
               desc: "Deploying autonomous swarms for precision crop monitoring and targeted spraying, reducing chemical waste by 40%.", 
               metric: "30% Increase in Yield",
-              img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000&auto=format&fit=crop"
+              img: "https://loremflickr.com/1200/800/agriculture,drone"
             },
             { 
               title: "Infrastructure", 
               subtitle: "Asset Integrity & Digital Twins",
               desc: "High-resolution 3D mapping and structural health monitoring for bridges, dams, and skyscrapers with sub-millimeter accuracy.", 
               metric: "90% Faster Inspections",
-              img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop"
+              img: "https://loremflickr.com/1200/800/city,skyscraper"
             },
             { 
               title: "Public Safety", 
               subtitle: "Rapid Response & Search-and-Rescue",
               desc: "Equipping emergency teams with thermal-vision swarms and high-bandwidth telemetry for mission-critical situational awareness.", 
               metric: "Instant Deployment",
-              img: "https://images.unsplash.com/photo-1518546305928-385624649695?q=80&w=2000&auto=format&fit=crop"
+              img: "https://loremflickr.com/1200/800/rescue,drone"
             }
           ].map((item, i) => (
             <section key={i} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
