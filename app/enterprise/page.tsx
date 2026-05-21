@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function Enterprise() {
   return (
@@ -24,16 +25,44 @@ export default function Enterprise() {
           </p>
         </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-bento-gap">
+        {/* Industry Case Studies */}
+        <div className="flex flex-col gap-24 mb-24">
           {[
-            { title: "Agriculture", desc: "Precision crop monitoring and autonomous spraying systems." },
-            { title: "Infrastructure", desc: "High-resolution structural inspection and thermal mapping." },
-            { title: "Public Safety", desc: "Rapid deployment surveillance and thermal search-and-rescue." }
+            { 
+              title: "Agriculture", 
+              subtitle: "Smart Farming & Yield Optimization",
+              desc: "Deploying autonomous swarms for precision crop monitoring and targeted spraying, reducing chemical waste by 40%.", 
+              metric: "30% Increase in Yield",
+              img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000&auto=format&fit=crop"
+            },
+            { 
+              title: "Infrastructure", 
+              subtitle: "Asset Integrity & Digital Twins",
+              desc: "High-resolution 3D mapping and structural health monitoring for bridges, dams, and skyscrapers with sub-millimeter accuracy.", 
+              metric: "90% Faster Inspections",
+              img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop"
+            },
+            { 
+              title: "Public Safety", 
+              subtitle: "Rapid Response & Search-and-Rescue",
+              desc: "Equipping emergency teams with thermal-vision swarms and high-bandwidth telemetry for mission-critical situational awareness.", 
+              metric: "Instant Deployment",
+              img: "https://images.unsplash.com/photo-1454165833767-1330084b1211?q=80&w=2000&auto=format&fit=crop"
+            }
           ].map((item, i) => (
-            <div key={i} className="bg-white dark:bg-surface-container-low rounded-bento p-8 bento-card-shadow border border-outline-variant/30 text-center">
-              <h3 className="font-display-lg text-xl font-bold mb-4 uppercase">{item.title}</h3>
-              <p className="text-on-surface-variant text-sm">{item.desc}</p>
-            </div>
+            <section key={i} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div className={`${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+                <span className="font-label-caps text-primary font-bold tracking-widest mb-2 block uppercase">{item.title}</span>
+                <h2 className="font-display-lg text-3xl md:text-5xl font-black uppercase mb-6">{item.subtitle}</h2>
+                <p className="font-body-md text-lg text-on-surface-variant mb-8">{item.desc}</p>
+                <div className="bg-primary-container/20 border-l-4 border-primary p-4 rounded-r-xl">
+                  <span className="font-display-lg text-xl font-bold text-primary">{item.metric}</span>
+                </div>
+              </div>
+              <div className="relative aspect-video rounded-bento overflow-hidden bento-card-shadow">
+                <Image src={item.img} alt={item.title} fill className="object-cover" />
+              </div>
+            </section>
           ))}
         </div>
       </main>
