@@ -60,7 +60,7 @@ export default function Enterprise() {
                 </div>
               </div>
               <div className="relative aspect-video rounded-bento overflow-hidden bento-card-shadow">
-                <Image src={item.img} alt={item.title} fill className="object-cover" />
+                <Image src={item.img} alt={item.title} fill unoptimized className="object-cover" />
               </div>
             </section>
           ))}
