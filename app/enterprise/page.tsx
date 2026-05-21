@@ -33,7 +33,7 @@ export default function Enterprise() {
               subtitle: "Smart Farming & Yield Optimization",
               desc: "Deploying autonomous swarms for precision crop monitoring and targeted spraying, reducing chemical waste by 40%.", 
               metric: "30% Increase in Yield",
-              img: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              img: "https://images.pexels.com/photos/2119094/pexels-photo-2119094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             },
             { 
               title: "Infrastructure", 
