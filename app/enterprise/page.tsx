@@ -33,21 +33,21 @@ export default function Enterprise() {
               subtitle: "Smart Farming & Yield Optimization",
               desc: "Deploying autonomous swarms for precision crop monitoring and targeted spraying, reducing chemical waste by 40%.", 
               metric: "30% Increase in Yield",
-              img: "https://loremflickr.com/1200/800/agriculture,drone"
+              img: "https://images.pexels.com/photos/2085834/pexels-photo-2085834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             },
             { 
               title: "Infrastructure", 
               subtitle: "Asset Integrity & Digital Twins",
               desc: "High-resolution 3D mapping and structural health monitoring for bridges, dams, and skyscrapers with sub-millimeter accuracy.", 
               metric: "90% Faster Inspections",
-              img: "https://loremflickr.com/1200/800/city,skyscraper"
+              img: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             },
             { 
               title: "Public Safety", 
               subtitle: "Rapid Response & Search-and-Rescue",
               desc: "Equipping emergency teams with thermal-vision swarms and high-bandwidth telemetry for mission-critical situational awareness.", 
               metric: "Instant Deployment",
-              img: "https://loremflickr.com/1200/800/rescue,drone"
+              img: "https://images.pexels.com/photos/1034812/pexels-photo-1034812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             }
           ].map((item, i) => (
             <section key={i} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
