@@ -111,7 +111,7 @@ export default function Home() {
                 unoptimized
                 priority
                 className="w-full h-auto rounded-xl object-cover transform group-hover:scale-105 transition-transform duration-700"
-                src="https://images.unsplash.com/photo-1506947411487-a56738267384?q=80&w=2000&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?q=80&w=2000&auto=format&fit=crop"
                 style={{ height: "auto" }}
               />
               <div className="absolute top-8 left-8 md:top-12 md:left-12">
@@ -133,7 +133,7 @@ export default function Home() {
                 fill
                 unoptimized
                 className="absolute inset-0 w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1521749831579-47cb95b8842c?q=80&w=2000&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1507582020474-9a35b7d455d9?q=80&w=2000&auto=format&fit=crop"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/60 dark:from-black/80 via-transparent to-transparent"></div>
               <div className="absolute inset-0 flex items-center justify-center">
