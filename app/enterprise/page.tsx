@@ -47,7 +47,7 @@ export default function Enterprise() {
               subtitle: "Rapid Response & Search-and-Rescue",
               desc: "Equipping emergency teams with thermal-vision swarms and high-bandwidth telemetry for mission-critical situational awareness.", 
               metric: "Instant Deployment",
-              img: "https://images.unsplash.com/photo-1512404047218-356972076046?q=80&w=2000&auto=format&fit=crop"
+              img: "https://images.unsplash.com/photo-1518546305928-385624649695?q=80&w=2000&auto=format&fit=crop"
             }
           ].map((item, i) => (
             <section key={i} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
