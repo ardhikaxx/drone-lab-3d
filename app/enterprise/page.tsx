@@ -33,14 +33,14 @@ export default function Enterprise() {
               subtitle: "Smart Farming & Yield Optimization",
               desc: "Deploying autonomous swarms for precision crop monitoring and targeted spraying, reducing chemical waste by 40%.", 
               metric: "30% Increase in Yield",
-              img: "https://images.pexels.com/photos/2085834/pexels-photo-2085834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              img: "https://images.pexels.com/photos/3024827/pexels-photo-3024827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             },
             { 
               title: "Infrastructure", 
               subtitle: "Asset Integrity & Digital Twins",
               desc: "High-resolution 3D mapping and structural health monitoring for bridges, dams, and skyscrapers with sub-millimeter accuracy.", 
               metric: "90% Faster Inspections",
-              img: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              img: "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             },
             { 
               title: "Public Safety", 
