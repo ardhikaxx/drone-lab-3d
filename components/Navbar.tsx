@@ -103,10 +103,10 @@ export default function Navbar() {
         isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
       }`}>
         <div className="flex flex-col p-mobile-margin gap-4">
-          <a className="font-body-md text-body-md text-primary font-semibold" href="#">Fleet</a>
-          <a className="font-body-md text-body-md text-on-surface-variant" href="#">Technology</a>
-          <a className="font-body-md text-body-md text-on-surface-variant" href="#">Enterprise</a>
-          <a className="font-body-md text-body-md text-on-surface-variant" href="#">Support</a>
+          <a className="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="/">Fleet</a>
+          <a className="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="/technology">Technology</a>
+          <a className="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="/enterprise">Enterprise</a>
+          <a className="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="/support">Support</a>
           <button className="sm:hidden w-full bg-on-background text-inverse-on-surface px-6 py-3 rounded-full font-body-md text-body-md font-semibold">
             Get Started
           </button>
